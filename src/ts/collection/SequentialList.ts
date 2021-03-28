@@ -1,30 +1,47 @@
-import { Util } from './util';
+import { Iterable } from '../util/iterator/Iterable';
+import { Iterator } from '../util/iterator/Iterator';
+import { ListIterator } from './ListIterator';
 import { Nullable, Node } from './Node';
+import { Util } from '../util/Util'; 
 
-export class LinkedList<E> {
+export abstract class SequentialList<E> implements Iterable<E> {
     protected head: Nullable<Node<E>>;
     protected tail: Nullable<Node<E>>;
     protected length: number;
 
-    protected readonly ERROR_EMPTY_LIST = 'List is empty!';
-    protected readonly ERROR_ILLEGAL_ARG = 'Inappropriate argument!';
+    protected STRUCTURE = 'List';
+    protected ERROR_EMPTY_LIST = `${this.STRUCTURE} is empty!`;
+    protected ERROR_ILLEGAL_ARG = 'Inappropriate argument!';
 
     constructor() {
-        this.clean();
+        this.clear();
     }
 
-    public clean() {
-        this.head = null;
-        this.tail = null;
-        this.length = 0;
+    public iterator(): Iterator<E> {
+        const sequential_list_iterator: Iterator<E> = new ListIterator(this.head);
+        return sequential_list_iterator;
     }
 
-    public empty(node: Nullable<Node<E>> = this.head): boolean {
-        return node == null;
+    public clear(node: Nullable<Node<E>> = this.head): void {
+        if(this.empty(node)) {
+            this.head = null;
+            this.tail = null;
+            this.length = 0;
+            return;
+        }
+
+        const next = node.next;
+        node = null;
+
+        return this.clear(next);
     }
 
     protected assertNotEmpty(node: Nullable<Node<E>> = this.head, message: string = this.ERROR_EMPTY_LIST): void {
-        Util.assertFalse(this.empty(node), message);
+        Node.assertNotEmpty<E>(this.head, this.ERROR_EMPTY_LIST);
+    }
+
+    public empty(node: Nullable<Node<E>> = this.head): boolean {
+        return Node.empty<E>(node);
     }
 
     public size(): number {
@@ -41,47 +58,16 @@ export class LinkedList<E> {
         return this.contains(data, node.next);
     }
 
-    public clone(): LinkedList<E> {
-        const cloned = new LinkedList<E>();
-
-        if(this.empty())
-            return cloned;
-
-        cloned.head = new Node(this.head.data);
-        cloned.tail = this.clone_impl(cloned.head, this.head);
-
-        return cloned;
-    }
-
-    private clone_impl(node_dest: Nullable<Node<E>>, node_src: Nullable<Node<E>>): Nullable<Node<E>> {
-        if(this.empty(node_src.next))
-            return node_dest; 
-
-        node_dest.next = new Node(node_src.next.data);
-
-        return this.clone_impl(node_dest.next, node_src.next);
-    }
-
     public print(): void {
-        console.log("List:");
-        return this.print_impl();
+        console.log(this.STRUCTURE);
+
+        const it = this.iterator();
+        while(it.hasNext())
+            console.log(`[${it.next()}]`);
+        console.log(`[null]`);
     }
 
-    protected print_impl(node: Nullable<Node<E>> = this.head): void {
-        if(this.empty(node)) {
-            console.log(`[null]`);
-            return;
-        }
-
-        console.log(`[${node.data}]`);
-        return this.print_impl(node.next);
-    }
-
-    public add(data: E): void {
-        return this.addFirst(data);
-    }
-
-    public addFirst(data: E): void {
+    protected addFirst(data: E): void {
         const node = new Node(data);
 
         if(this.empty())
@@ -92,7 +78,7 @@ export class LinkedList<E> {
         this.length++;
     }
 
-    public addLast(data: E): void {
+    protected addLast(data: E): void {
         const node = new Node(data);
 
         if(this.empty())
@@ -104,21 +90,17 @@ export class LinkedList<E> {
         this.length++;
     }
 
-    public peek(): E {
-        return this.peekFirst();
-    }
-
-    public peekFirst(): E {
+    protected peekFirst(): E {
         this.assertNotEmpty();
         return this.head.data;
     }
 
-    public peekLast(): E {
+    protected peekLast(): E {
         this.assertNotEmpty();
         return this.tail.data;
     }
 
-    public get(n: number): E {
+    protected get(n: number): E {
         this.assertNotEmpty();
         return this.getNode(n, this.head).data;
     }
@@ -132,11 +114,7 @@ export class LinkedList<E> {
         return this.getNode(n-1, node.next);
     }
 
-    public remove(): E {
-        return this.removeFirst();
-    }
-
-    public removeFirst(): E {
+    protected removeFirst(): E {
         this.assertNotEmpty();
 
         const element = this.head.data;
@@ -149,12 +127,12 @@ export class LinkedList<E> {
         return element;
     }
 
-    public removeLast(): E {
+    protected removeLast(): E {
         this.assertNotEmpty();
 
         const element = this.tail.data;
         if(this.length == 1) {
-            this.clean();
+            this.clear();
             return element;
         }
 
@@ -164,6 +142,15 @@ export class LinkedList<E> {
 
         this.length--;
         return element;
+    }
+
+    protected clone_impl(node_dest: Nullable<Node<E>>, node_src: Nullable<Node<E>>): Nullable<Node<E>> {
+        if(this.empty(node_src.next))
+            return node_dest; 
+
+        node_dest.next = new Node(node_src.next.data);
+
+        return this.clone_impl(node_dest.next, node_src.next);
     }
 
 }

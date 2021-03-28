@@ -1,16 +1,19 @@
-import { LinkedList } from "./ts/LinkedList";
-let list = new LinkedList();
+import { LinkedList } from "./ts/collection/LinkedList";
 
-list.add(10);
+let list = new LinkedList<number>();
+
+list.addFirst(10);
 list.addLast(50);
-list.add(20);
-list.add(30);
+list.addFirst(20);
+list.addFirst(30);
 list.addLast(80);
-list.add(5);
+list.addFirst(5);
+list.removeFirst();
 list.print();
 
-let list2 = list.clone();
-list2.removeFirst();
-list2.add(1);
-list2.print();
-list.print();
+let it = list.iterator();
+
+console.log("iterador:");
+while(it.hasNext()) {
+	console.log(it.next());
+}
