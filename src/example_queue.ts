@@ -11,7 +11,7 @@ queue.add(30);
 queue.print();
 
 console.log("last/tail: " + queue.peek());
-console.log("exists : " + queue.peek());
+console.log("exists 20? " + queue.contains(20));
 
 const it = queue.iterator();
 while(it.hasNext())

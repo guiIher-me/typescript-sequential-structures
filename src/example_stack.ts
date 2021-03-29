@@ -13,7 +13,7 @@ stack.push('s');
 stack.print();
 
 console.log("contains 'x'? ", stack.contains('x'));
-console.log("letters: " + stack.size());
+console.log("size: " + stack.size());
 console.log("Top: " + stack.peek());
 
 //we could also use an iterator
