@@ -1,5 +1,6 @@
 
 
+
 ## Estruturas de Dados Sequenciais |  Typescript
 
 :books: Lib para **estruturas de dados** sequenciais clássicas
@@ -59,11 +60,7 @@ Este repositório tem por objetivo prover uma pequena biblioteca livre escrita e
 Os pré-requisitos para a utilização da biblioteca são mínimos:
 
 <ul>
-<<<<<<< HEAD
-	<li>Instalar <a href="https://www.typescriptlang.org/download">Typescript</a></li>
-=======
 	<li>Instalar <a href="https://www.typescriptlang.org/download">Typescript Transpiler</a> em sua máquina;</li>
->>>>>>> d3bb87611224726d539ed5b70a746f2f35658a21
 	<li>Possuir um editor de código que suporte Typescript.</li>
 </ul>
 
@@ -147,14 +144,9 @@ const element = list.peekFirst();
 //const element = list.peek(); //alternativa...
 ```
 
-<<<<<<< HEAD
-<h4 id="linkedlist-peekLast">Recuperação do fim</h4>
-Para pegar/recuperar o fim da lista, sem removê-lo, utilize a função **peekLast**.
-=======
 <h4 id="linkedlist-peekLast">5.6. Recuperação do fim</h4>
 
 Para pegar/recuperar o fim da lista, sem removê-lo, utilize a função **peekFirst**, ou ainda, utilize a função de apelido **peek**.
->>>>>>> d3bb87611224726d539ed5b70a746f2f35658a21
 
 Exemplo: 
 ```
@@ -173,7 +165,7 @@ const element = list.removeFirst();
 ```
 <h4 id="linkedlist-removeLast">5.8. Remoção do fim</h4>
 
-Para remover o fim da lista e retorná-lo, utilize a função **removeFirst**.
+Para remover o fim da lista e retorná-lo, utilize a função **removeLast**.
 
 Exemplo: 
 ```
@@ -195,6 +187,7 @@ Pilha é uma estrutura de dados do tipo LIFO (last-in first-out), onde o último
 Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
 
 <h4 id="stack-import">6.1. Importação</h4>
+
 Para importar a classe **Stack** para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
 
 ```
@@ -253,6 +246,7 @@ const element = stack.pop();
 Filas são **estruturas de dados** do tipo FIFO (first-in first-out), onde o primeiro elemento a ser inserido, será o primeiro a ser retirado.  Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
 
 <h4 id="queue-import">7.1. Importação</h4>
+
 Para importar a classe **Queue** para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
 
 ```
@@ -272,7 +266,7 @@ const queue = new Queue(); //por padrão [any]
 const queue = new Queue<number>(); //para números
 ```
 ```
-const queue = new Queue<string>();; //para caracteres
+const queue = new Queue<string>(); //para caracteres
 ```
 
 <h4 id="queue-add">7.3. Inserção</h4>
@@ -431,4 +425,3 @@ export class Queue<E> extends SequentialList<E> {
 	
 }
 ```
-
