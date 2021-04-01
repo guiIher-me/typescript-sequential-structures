@@ -56,7 +56,7 @@ Este repositório tem por objetivo prover uma pequena biblioteca livre escrita e
 Os pré-requisitos para a utilização da biblioteca são mínimos:
 
 <ul>
-	<li>Instalar [Typescript Transpiler](https://www.typescriptlang.org/download) em sua máquina;</li>
+	<li>Instalar <a href="https://www.typescriptlang.org/download">Typescript</a></li>
 	<li>Possuir um editor de código que suporte Typescript.</li>
 </ul>
 
@@ -134,7 +134,7 @@ const element = list.peekFirst();
 ```
 
 <h4 id="linkedlist-peekLast">Recuperação do fim</h4>
-Para pegar/recuperar o fim da lista, sem removê-lo, utilize a função **peekFirst**, ou ainda, utilize a função de apelido **peek**.
+Para pegar/recuperar o fim da lista, sem removê-lo, utilize a função **peekLast**.
 
 Exemplo: 
 ```
