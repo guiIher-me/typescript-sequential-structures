@@ -1,6 +1,6 @@
 
 
-## Estruturas de Dados |  Typescript
+## Estruturas de Dados Sequenciais |  Typescript
 
 :books: Lib para **estruturas de dados** sequenciais clássicas
 
