@@ -9,7 +9,7 @@ export abstract class SequentialList<E> implements Iterable<E> {
     protected tail: Nullable<Node<E>>;
     protected length: number;
 
-    protected STRUCTURE = 'List';
+    protected STRUCTURE = 'List'; //default
     protected ERROR_EMPTY_LIST = `${this.STRUCTURE} is empty!`;
     protected ERROR_ILLEGAL_ARG = 'Inappropriate argument!';
 
@@ -115,9 +115,7 @@ export abstract class SequentialList<E> implements Iterable<E> {
     }
 
     protected removeFirst(): E {
-        this.assertNotEmpty();
-
-        const element = this.head.data;
+        const element = this.peekFirst();
         this.head = this.head.next;
 
         if(this.empty())
@@ -128,9 +126,7 @@ export abstract class SequentialList<E> implements Iterable<E> {
     }
 
     protected removeLast(): E {
-        this.assertNotEmpty();
-
-        const element = this.tail.data;
+        const element = this.peekLast();
         if(this.length == 1) {
             this.clear();
             return element;
