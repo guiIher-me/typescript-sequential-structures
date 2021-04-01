@@ -1,7 +1,7 @@
 {
   "name": "structures",
   "version": "1.0.0",
-  "description": "library for classic sequential data structures",
+  "description": "typescript library for classic sequential data structures",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
