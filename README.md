@@ -1,7 +1,7 @@
 
 ## Estruturas de Dados |  Typescript
 
-:books: Lib para __estruturas de dados__ sequenciais clássicas
+:books: Lib para **estruturas de dados** sequenciais clássicas
 
 <h3 id="content">Tabela de Conteúdo</h3>
 <ul>
@@ -50,9 +50,11 @@
 </ul>
 
 <h3 id="about">1. Sobre</h3>
-Este repositório tem por objetivo prover uma pequena biblioteca livre escrita em Typescript puro para Estruturas de Dados Sequenciais Clássicas, isto é, para __Listas Encadeadas__ , __Pilhas__ e __Filas__.
+
+Este repositório tem por objetivo prover uma pequena biblioteca livre escrita em Typescript puro para Estruturas de Dados Sequenciais Clássicas, isto é, para **Listas Encadeadas** , **Pilhas** e **Filas**.
 
 <h3 id="requirements">2. Pré-requisitos</h3>
+
 Os pré-requisitos para a utilização da biblioteca são mínimos:
 
 <ul>
@@ -61,6 +63,7 @@ Os pré-requisitos para a utilização da biblioteca são mínimos:
 </ul>
 
 <h3 id="how-to-use">3. Como Utilizar</h3>
+
 Veja como é simples utilizar esta biblioteca em seu projeto:
 
 <ul>
@@ -74,16 +77,19 @@ Veja como é simples utilizar esta biblioteca em seu projeto:
 Cada Estrutura de Dados conta com um exemplo de utilização contido no diretório "src/". Já, para ver o exemplo em funcionamento, abra o respectivo exemplo.html de sua escolha contido no diretório "dist/".
 
 <h3 id="linkedlist">5. Lista Encadeada</h3>
+
 Lista Encadeada é uma estrutura de dados linear, composta de nós interligados. Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
 
 <h4 id="linkedlist-import">Importação</h4>
-Para importar a classe __LinkedList__ para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
+
+Para importar a classe **LinkedList** para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
 
 ```
 import { LinkedList } from "./lib/collection/LinkedList";
 ```
 
 <h4 id="linkedlist-new">Criação</h4>
+
 Para criar uma nova Lista Encadeada, instancie um novo objeto a partir da Classe LinkedList e escolha o tipo de dado que quer armazenar.
 
 Exemplos:
@@ -99,7 +105,8 @@ const list = new LinkedList<string>(); //para caracteres
 ```
 
 <h4 id="linkedlist-addFirst">Inserção no início</h4>
-Para inserir elementos no início da lista, utilize a função __addFirst__, ou ainda, utilize a função de apelido __add__.
+
+Para inserir elementos no início da lista, utilize a função **addFirst**, ou ainda, utilize a função de apelido **add**.
 
 Exemplos:
 
@@ -113,7 +120,8 @@ list.addFirst('a');
 ```
 
 <h4 id="linkedlist-addLast">Inserção no fim</h4>
-Para inserir elementos no fim da lista, utilize a função __addLast__.
+
+Para inserir elementos no fim da lista, utilize a função **addLast**.
 
 Exemplos:
 
@@ -125,7 +133,8 @@ list.addLast('z');
 ```
 
 <h4 id="linkedlist-peekFirst">Recuperação do início</h4>
-Para pegar/recuperar o início da lista, sem removê-lo, utilize a função __peekFirst__, ou ainda, utilize a função de apelido __peek__.
+
+Para pegar/recuperar o início da lista, sem removê-lo, utilize a função **peekFirst**, ou ainda, utilize a função de apelido **peek**.
 
 Exemplo: 
 ```
@@ -134,7 +143,8 @@ const element = list.peekFirst();
 ```
 
 <h4 id="linkedlist-peekLast">Recuperação do fim</h4>
-Para pegar/recuperar o fim da lista, sem removê-lo, utilize a função __peekFirst__, ou ainda, utilize a função de apelido __peek__.
+
+Para pegar/recuperar o fim da lista, sem removê-lo, utilize a função **peekFirst**, ou ainda, utilize a função de apelido **peek**.
 
 Exemplo: 
 ```
@@ -142,7 +152,8 @@ const element = list.peekLast();
 ```
 
 <h4 id="linkedlist-removeFirst">Remoção do início</h4>
-Para remover o início da lista e retorná-lo, utilize a função __removeFirst__, ou ainda, utilize a função de apelido __remove__.
+
+Para remover o início da lista e retorná-lo, utilize a função **removeFirst**, ou ainda, utilize a função de apelido **remove**.
 
 Exemplo: 
 ```
@@ -151,7 +162,8 @@ const element = list.removeFirst();
 
 ```
 <h4 id="linkedlist-removeLast">Remoção do fim</h4>
-Para remover o fim da lista e retorná-lo, utilize a função __removeFirst__.
+
+Para remover o fim da lista e retorná-lo, utilize a função **removeFirst**.
 
 Exemplo: 
 ```
@@ -159,7 +171,7 @@ const element = list.removeLast();
 ```
 
 <h4 id="linkedlist-clone">Clonar</h4>
-Para clonar todos os elementos de uma lista para uma nova lista, utilize a função __clone__.
+Para clonar todos os elementos de uma lista para uma nova lista, utilize a função **clone**.
 
 Exemplo:
 
@@ -168,17 +180,19 @@ const cloned_list = list.clone();
 ```
 
 <h3 id="stack">6. Pilha</h3>
+
 Pilha é uma estrutura de dados do tipo LIFO (last-in first-out), onde o último elemento a ser inserido, será o primeiro a ser retirado.
 Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
 
 <h4 id="stack-import">Importação</h4>
-Para importar a classe __Stack__ para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
+Para importar a classe **Stack** para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
 
 ```
 import { Stack } from "./lib/collection/Stack";
 ```
 
 <h4 id="stack-new">Criação</h4>
+
 Para criar uma nova Pilha, instancie um novo objeto a partir da Classe Stack e escolha o tipo de dado que quer armazenar.
 
 Exemplos:
@@ -194,7 +208,8 @@ const stack = new Stack<string>(); //para caracteres
 ```
 
 <h4 id="stack-add">Inserção</h4>
-Na Pilha, inserções ocorrem sempre no __início__/topo, para isso, utilize a função __push__, com uma nova pilha instanciada.
+
+Na Pilha, inserções ocorrem sempre no **início**/topo, para isso, utilize a função **push**, com uma nova pilha instanciada.
 
 Exemplos:
 
@@ -206,7 +221,8 @@ stack.push('a'); //para caracteres
 ```
 
 <h4 id="stack-peek">Recuperação</h4>
-Para pegar/recuperar o início/topo da Pilha, sem removê-lo, utilize a função __peek__.
+
+Para pegar/recuperar o início/topo da Pilha, sem removê-lo, utilize a função **peek**.
 
 Exemplo: 
 ```
@@ -214,7 +230,8 @@ const element = stack.peek();
 ```
 
 <h4 id="stack-remove">Remoção</h4>
-Para remover o início/topo da Pilha e retorná-lo, utilize a função __pop__.
+
+Para remover o início/topo da Pilha e retorná-lo, utilize a função **pop**.
 
 Exemplo: 
 ```
@@ -222,16 +239,18 @@ const element = stack.pop();
 ```
 
 <h3 id="queue">7. Fila</h3>
-Filas são __estruturas de dados__ do tipo FIFO (first-in first-out), onde o primeiro elemento a ser inserido, será o primeiro a ser retirado.  Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
+
+Filas são **estruturas de dados** do tipo FIFO (first-in first-out), onde o primeiro elemento a ser inserido, será o primeiro a ser retirado.  Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
 
 <h4 id="queue-import">Importação</h4>
-Para importar a classe __Queue__ para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
+Para importar a classe **Queue** para seu projeto, utilize a diretiva "import" do Typescript. Por padrão:
 
 ```
 import { Queue } from "./lib/collection/Queue";
 ```
 
 <h4 id="queue-new">Criação</h4>
+
 Para criar uma nova Fila, instancie um novo objeto a partir da Classe Queue e escolha o tipo de dado que quer armazenar.
 
 Exemplos:
@@ -247,7 +266,8 @@ const queue = new Queue<string>();; //para caracteres
 ```
 
 <h4 id="queue-add">Inserção</h4>
-Na Fila, inserções ocorrem sempre no __fim__, para isso, utilize a função __add__, com uma nova fila instanciada.
+
+Na Fila, inserções ocorrem sempre no **fim**, para isso, utilize a função **add**, com uma nova fila instanciada.
 
 Exemplos:
 
@@ -259,7 +279,8 @@ queue.add('a'); //para caracteres
 ```
 
 <h4 id="queue-peek">Recuperação</h4>
-Para pegar/recuperar o __fim__ da Fila, sem removê-lo, utilize a função __peek__.
+
+Para pegar/recuperar o **fim** da Fila, sem removê-lo, utilize a função **peek**.
 
 Exemplo: 
 ```
@@ -267,7 +288,8 @@ const element = queue.peek();
 ```
 
 <h4 id="queue-remove">Remoção</h4>
-Para remover o __início__ da Fila e retorná-lo, utilize a função __remove__.
+
+Para remover o **início** da Fila e retorná-lo, utilize a função **remove**.
 
 Exemplo: 
 ```
@@ -275,10 +297,12 @@ const element = queue.remove();
 ```
 
 <h3 id="general-functions">Funcionalidades Gerais</h3>
-Além das funcionalidades específicas listadas de cada estrutura de dados apresentada, a __estrutura base__ de todas elas possui funcionalidades padrões, comuns à todas, confira a seguir:
+
+Além das funcionalidades específicas listadas de cada estrutura de dados apresentada, a **estrutura base** de todas elas possui funcionalidades padrões, comuns à todas, confira a seguir:
 
 <h4 id="general-empty">Vazio</h4>
-Para verificar se uma estrutura está vazia, utilize a função __empty__.
+
+Para verificar se uma estrutura está vazia, utilize a função **empty**.
 
 Exemplos:
 ```
@@ -292,7 +316,8 @@ if(queue.empty()) console.log("Fila vazia");
 ```
 
 <h4 id="general-size">Tamanho</h4>
-Para retornar a quantidade de elementos atuais na estrutura, utilize a função __size__.
+
+Para retornar a quantidade de elementos atuais na estrutura, utilize a função **size**.
 
 Exemplos:
 
@@ -307,7 +332,8 @@ let size = queue.size(); //tamanho da fila
 ```
 
 <h4 id="general-contains">Contém</h4>
-Para verificar se um estrutura contém um determinado elemento, utilize a função __contains__.
+
+Para verificar se um estrutura contém um determinado elemento, utilize a função **contains**.
 
 Exemplos:
 ```
@@ -321,7 +347,8 @@ if(queue.contains(1.5)) console.log("contém 1.5");
 ```
 
 <h4 id="general-clear">Limpar</h4>
-Para remover todos os elementos de uma estrutura, utilize a função __clear__.
+
+Para remover todos os elementos de uma estrutura, utilize a função **clear**.
 
 Exemplos:
 
@@ -337,7 +364,7 @@ queue.clear();
 
 <h4 id="general-iterator">Iterador</h4>
 
-Para iterar sobre elementos de uma estrutura, utilize o padrão __Iterator__ em conjunto com as funções __hasNext__ e __next__
+Para iterar sobre elementos de uma estrutura, utilize o padrão **Iterator** em conjunto com as funções **hasNext** e **next**
 
 Exemplos
 
@@ -359,9 +386,9 @@ while(it.hasNext()) //enquanto tiver elementos...
 
 <h4 id="general-print">Printar [debug only]</h4>
 
-[apenas para debug] Para printar todos os elementos de uma estrutura utilize a função __print__. 
+[apenas para debug] Para printar todos os elementos de uma estrutura utilize a função **print**. 
 
-__Atenção__: Você pode/deve remover esta função em ambiente de __produção__.
+**Atenção**: Você pode/deve remover esta função em ambiente de **produção**.
 
 Exemplos:
 ```
@@ -376,7 +403,7 @@ queue.print();
 
 <h3 id="custom">Customização</h3>
 
-Para implementar sua própria estrutura de dados customizada, você pode estender a classe base abstrata __SequentialList__ ou estender uma das estruturas sequenciais da biblioteca, criando, assim, novas funcionalidades ou especializando funcionalidades já existentes.
+Para implementar sua própria estrutura de dados customizada, você pode estender a classe base abstrata **SequentialList** ou estender uma das estruturas sequenciais da biblioteca, criando, assim, novas funcionalidades ou especializando funcionalidades já existentes.
 
 Exemplo:
 
