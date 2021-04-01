@@ -1,7 +1,7 @@
 {
   "name": "structures",
   "version": "1.0.0",
-  "description": "",
+  "description": "library for classic sequential data structures",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "Guilherme Oliveira <coliveira.guilherme@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "ts-loader": "^8.0.18",
     "typescript": "^4.2.3",

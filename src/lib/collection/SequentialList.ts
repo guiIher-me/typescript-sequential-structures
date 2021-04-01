@@ -2,7 +2,7 @@ import { Iterable } from '../util/iterator/Iterable';
 import { Iterator } from '../util/iterator/Iterator';
 import { ListIterator } from './ListIterator';
 import { Nullable, Node } from './Node';
-import { Util } from '../util/Util'; 
+import { Util } from '../util/Util';
 
 export abstract class SequentialList<E> implements Iterable<E> {
     protected head: Nullable<Node<E>>;
