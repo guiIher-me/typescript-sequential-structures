@@ -12,7 +12,7 @@ export class Queue<E> extends SequentialList<E> {
     }
 
     public peek(): E {
-        return super.peekLast();
+        return super.peekFirst();
     }
 
     public remove(): E {
