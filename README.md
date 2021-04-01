@@ -64,7 +64,7 @@ Os pré-requisitos para a utilização da biblioteca são mínimos:
 Veja como é simples utilizar esta biblioteca em seu projeto:
 
 <ul>
-	<li>Faça o download/fork desta biblioteca para sua máquina;</li>
+	<li>Faça o download/clone desta biblioteca para sua máquina;</li>
 	<li>Extraia o diretório "lib/" localizado em "src/lib/" para seu projeto;</li>
 	<li>Importe a estrutura de dados que deseja utilizar usando a diretiva "import" do Typescript. </li>
 </ul>
