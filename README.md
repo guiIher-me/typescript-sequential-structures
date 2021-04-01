@@ -60,7 +60,7 @@ Este repositório tem por objetivo prover uma pequena biblioteca livre escrita e
 Os pré-requisitos para a utilização da biblioteca são mínimos:
 
 <ul>
-	<li>Instalar <a href="https://www.typescriptlang.org/download">Typescript Transpiler</a> em sua máquina;</li>
+	<li>Instalar <a target="_blank" href="https://www.typescriptlang.org/download">Typescript Transpiler</a> em sua máquina;</li>
 	<li>Possuir um editor de código que suporte Typescript.</li>
 </ul>
 
