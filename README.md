@@ -184,7 +184,7 @@ const cloned_list = list.clone();
 <h3 id="stack">6. Pilha</h3>
 
 Pilha é uma estrutura de dados do tipo LIFO (last-in first-out), onde o último elemento a ser inserido, será o primeiro a ser retirado.
-Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
+Confira a seguir as principais funcionalidades implementadas que caracterizam-a:
 
 <h4 id="stack-import">6.1. Importação</h4>
 
@@ -243,7 +243,7 @@ const element = stack.pop();
 
 <h3 id="queue">7. Fila</h3>
 
-Filas são **estruturas de dados** do tipo FIFO (first-in first-out), onde o primeiro elemento a ser inserido, será o primeiro a ser retirado.  Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
+Filas são **estruturas de dados** do tipo FIFO (first-in first-out), onde o primeiro elemento a ser inserido, será o primeiro a ser retirado.  Confira a seguir as principais funcionalidades implementadas que caracterizam-a:
 
 <h4 id="queue-import">7.1. Importação</h4>
 
