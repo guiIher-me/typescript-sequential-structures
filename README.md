@@ -80,7 +80,7 @@ Cada Estrutura de Dados conta com um exemplo de utilização contido no diretór
 
 <h3 id="linkedlist">5. Lista Encadeada</h3>
 
-Lista Encadeada é uma estrutura de dados linear, composta de nós interligados. Confira a seguir as principais funcionalidades implementadas que caracterizam-na:
+Lista Encadeada é uma estrutura de dados linear, composta de nós interligados. Confira a seguir as principais funcionalidades implementadas que caracterizam-a:
 
 <h4 id="linkedlist-import">5.1. Importação</h4>
 
